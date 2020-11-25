@@ -1,17 +1,70 @@
+const inquirer = require('inquirer');
+const generateReadme = require('./src/page-template.js');
+const writeToFile = require('./utils/generateMarkdown');
+
+
+
 // array of questions for user
-const questions = [
-
-];
-
-// function to write README file
-function writeToFile(fileName, data) {
-
+const questions = () => {
+    return inquirer.prompt([
+        //project title
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the title of your project?',
+            validate: (titleInput) => {
+                if (titleInput) {
+                    return true;
+                } else {
+                    console.log('Your project needs a title!');
+                    return false;
+                }
+            }
+        },
+        //description
+        {
+            type: 'input',
+            name: 'description',
+            message: 'Describe your project:',
+            validate: (descriptionInput) => {
+                if (descriptionInput) {
+                    return true;
+                } else {
+                    console.log('Please provide a description');
+                    return false;
+                }
+            }
+            
+        }
+    ])
 }
 
-// function to initialize program
-function init() {
+    //installation instructions
 
-}
+    //usage info
 
-// function call to initialize program
-init();
+    //contribution guildelines
+
+    //test instructions
+
+    //license
+
+    //GH username
+
+    //email
+
+
+
+
+// initialize generator
+questions()
+    .then(answers => {
+        console.log('answers:', answers)
+        return generateReadme(answers);
+    })
+    .then(makeMarkdown => {
+        return writeToFile(makeMarkdown)
+    })
+    .catch(err => {
+        console.log(err);
+    })
