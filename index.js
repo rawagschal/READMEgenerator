@@ -30,18 +30,47 @@ const questions = () => {
                 if (descriptionInput) {
                     return true;
                 } else {
-                    console.log('Please provide a description');
+                    console.log('Please provide a description.');
                     return false;
                 }
-            }
-            
-        }
+            },   
+        },
+        //installation instructions
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'Describe to others how to install your code',
+            validate: (installationInput) => {
+                if (installationInput) {
+                    return true;
+                } else {
+                    console.log('You gotta help people install your code.');
+                    return false;
+                }
+            },
+        },
+        //usage info
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Describe to others how to use your app',
+            validate: (usageInput) => {
+                if (usageInput) {
+                    return true;
+                } else {
+                console.log ('Pls explain how to use your app.');
+                return false;
+               
+                }
+            },
+        },
+        
     ])
 }
 
-    //installation instructions
+    
 
-    //usage info
+
 
     //contribution guildelines
 
