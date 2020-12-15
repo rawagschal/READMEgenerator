@@ -3,9 +3,9 @@ const generateDescription = (description) => {
         return '';
     }
     return `
-    ## Description
-    
-    ${description}`
+## Description
+
+${description}`
 };
 
 // license w/ badge
@@ -22,42 +22,42 @@ const generateLicense = (license) => {
 function generateMarkdown(data) {
     console.log('markdown:', data);
     return `# ${data.title}
-    ${generateDescription(data.description)}
+${generateDescription(data.description)}
 
-    ## Table of Contents
+## Table of Contents
 
-    * [License](#license)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Credits](#credits)
-    * [Contributions](#contributions)
-    * [Tests](#tests)
-    
-    ${generateLicense(data.license)}
+* [License](#license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [Contributions](#contributions)
+* [Tests](#tests)
 
-    ## Installation
+${generateLicense(data.license)}
 
-    ${data.installation}
+## Installation
 
-    ## Usage
+${data.installation}
 
-    ${data.usage}
+## Usage
 
-    ## Credits
+${data.usage}
 
-    ${data.credits}
+## Credits
 
-    ## Contributions
+${data.credits}
 
-    ${data.contribution}
+## Contributions
 
-    ## Tests
+${data.contribution}
 
-    ${data.tests}
+## Tests
 
-    ## Contact
+${data.tests}
 
-    Questions, comments, or conerns? Find me on [GitHub](https://github.com/${data.github}/) or [send me an email](mailto:${data.email}).`;
+## Contact
+
+Questions, comments, or conerns? Find me on [GitHub](https://github.com/${data.github}/) or [send me an email](mailto:${data.email}).`;
 };
 
 module.exports = generateMarkdown;

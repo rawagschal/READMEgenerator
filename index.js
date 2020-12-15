@@ -78,6 +78,7 @@ const questions = () => {
                 }
             },
         },
+        
         //test instructions
         {
             type: 'input',
@@ -94,7 +95,7 @@ const questions = () => {
         },
         //license
         {
-            type: 'list',
+            type: 'input',
             name: 'license',
             message: 'Please select which license you would like to use for your app',
             choices: ['MIT', 'GPL', 'Apache'],
