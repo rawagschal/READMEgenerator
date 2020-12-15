@@ -2,7 +2,7 @@
 
 ## Description
 
-A node.js application that generates a custom README.md file
+A node.js application that generates a custom README markdown file
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ Open the code in your code editor, run `npm i` to install dependencies, then `no
 
 ## Walkthrough
 
-Click here for a walkthrough of this application
+[Click here](./assets/READMEgenerator-walkthrough.mov) for a walkthrough of this application
 
 ## Credits
 
