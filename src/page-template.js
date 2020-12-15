@@ -14,9 +14,9 @@ const generateLicense = (license) => {
         return '';
     }
     return `
-    ## License
+## License
     
-    [![license badge]]https://img.shields.io/static/v1?label=license&message=${license}&color=important)](https://opensource.org/licenses/${license})`
+[![license badge](https://img.shields.io/static/v1?label=license&message=${license}&color=important)](https://opensource.org/licenses/${license})`
 };
 
 function generateMarkdown(data) {
