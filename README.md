@@ -28,7 +28,7 @@ Open the code in your code editor, run `npm i` to install dependencies, then `no
 
 ## Walkthrough
 
-[Click here](./assets/READMEgenerator-walkthrough.mov) for a walkthrough of this application
+[Click here](https://youtu.be/gsFRvSMBv8U) for a walkthrough of this application
 
 ## Credits
 
