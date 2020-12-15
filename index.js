@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const generateReadme = require('./src/page-template.js');
-const writeToFile = require('./utils/generateMarkdown');
+const writeFile = require('./utils/generateMarkdown');
 
 
 
@@ -146,7 +146,7 @@ questions()
         return generateReadme(answers);
     })
     .then(makeMarkdown => {
-        return writeToFile(makeMarkdown)
+        return writeFile(makeMarkdown)
     })
     .catch(err => {
         console.log(err);

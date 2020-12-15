@@ -1,8 +1,19 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+const fs = require ('fs');
 
-`;
-}
+const writeFile = (fileContent) => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile('./dist/README.md', fileContent, err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve({
+        ok: true,
+        message: 'File created'
+      });
+    });
+  });
+};
 
-module.exports = generateMarkdown;
+module.exports = writeFile;
