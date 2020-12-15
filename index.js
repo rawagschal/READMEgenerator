@@ -64,6 +64,20 @@ const questions = () => {
                 }
             },
         },
+        // credits
+        {
+            type: 'input',
+            name: 'credits',
+            message: 'What people or resources contributed to your code?',
+            validate: (creditsInput) => {
+                if (creditsInput) {
+                    return true;
+                } else {
+                    console.log('If you created this project all on your own, let the people know!');
+                    return false;
+                }
+            },
+        },
         //contribution guildelines
         {
             type: 'input',
@@ -78,7 +92,6 @@ const questions = () => {
                 }
             },
         },
-        
         //test instructions
         {
             type: 'input',
@@ -95,12 +108,12 @@ const questions = () => {
         },
         //license
         {
-            type: 'input',
+            type: 'list',
             name: 'license',
             message: 'Please select which license you would like to use for your app',
             choices: ['MIT', 'GPL', 'Apache'],
-            when: ({ confirmLicense }) => {
-                if (confirmLicense) {
+            validate: (licenseInput) => {
+                if (licenseInput) {
                     return true;
                 } else {
                     return false
@@ -111,7 +124,7 @@ const questions = () => {
         {
             type: 'input',
             name: 'github',
-            message: 'Please enter youru GitHub username:',
+            message: 'Please enter your GitHub username:',
             validate: (githubInput) => {
                 if (githubInput) {
                     return true;
